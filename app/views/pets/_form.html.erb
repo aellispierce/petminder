@@ -1,0 +1,12 @@
+<div class= "form">
+  <%= form_for(@pet) do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :breed %><br>
+    <%= f.text_field :breed %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+  </div><br>
+  <%= f.submit "Submit" %>
+  <% end %>
+</div>
