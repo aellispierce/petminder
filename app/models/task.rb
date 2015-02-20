@@ -4,5 +4,6 @@ class Task < ActiveRecord::Base
   # validates :time, presence: true
 
   belongs_to :user
+  validates :user, presence: true
   belongs_to :pet
 end
